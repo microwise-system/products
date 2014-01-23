@@ -1,0 +1,5 @@
+name: 元智系统产品
+safe: true
+lsi: false
+markdown: redcarpet
+pygments: true
