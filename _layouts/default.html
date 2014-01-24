@@ -8,6 +8,18 @@
 
     <link rel="icon" type="image/x-icon" href="{{site.url}}/favicon.ico">
     <link rel="stylesheet" href="{{site.url}}/css/theme-cerulean/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://libs.baidu.com/fontawesome/4.0.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="{{site.url}}/assets/common-css-0.1.2/common.min.css"/>
+    <style type="text/css">
+        .footer {
+            color: #aaa;
+            background-color: #2d2d2d;
+        }
+
+        .m-t-100{
+            margin-top: 100px;
+        }
+    </style>
 </head>
 <body>
 
@@ -43,22 +55,27 @@
 
 
 <hr>
-<div class="container">
-    <div class="row" style="margin-bottom: 50px;">
-        <div class="col-md-4">&copy; 元智系统 | MicroWise-System 2014</div>
 
-        <div class="col-md-4">
-            微博：Microwise-System西安
-            <span style="width: 70px;">
-            <wb:follow-button uid="3175063310" type="red_1" width="67" height="24"></wb:follow-button>
-            </span>
-            <br>
-            <img src="{{site.url}}/assets/weibo-qrcode.png" alt="" style="width: 100px; height: 100px;"/>
-        </div>
-        <div class="col-md-4">
-            微信： microwise_Coltd
-            <br>
-            <img src="{{site.url}}/assets/weixin-qrcode.jpg" alt="" style="width: 100px; height: 100px;"/>
+<div class="footer">
+    <div class="container p-v-50">
+        <div class="row">
+            <div class="col-md-4">&copy; 元智系统 | MicroWise-System 2014</div>
+
+            <div class="col-md-4">
+                微博：microwise-system西安
+                <br>
+                <div>
+                <img src="{{site.url}}/assets/weibo-qrcode.png" alt="" style="float:left; width: 100px; height: 100px;"/>
+                <span style="float: left; padding-left: 10px; width: 70px;">
+                <wb:follow-button uid="3175063310" type="red_1" width="67" height="24"></wb:follow-button>
+                </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                微信： microwise_Coltd
+                <br>
+                <img src="{{site.url}}/assets/weixin-qrcode.jpg" alt="" style="width: 100px; height: 100px;"/>
+            </div>
         </div>
     </div>
 </div>

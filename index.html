@@ -4,60 +4,102 @@ title: 首页
 ---
 
 <div class="row">
-    <div class="col-md-6">
-        <h2><img src="assets/galaxy-logo.png" alt="galaxy" style="width: 30px; height: 30px;"/> 银河</h2>
+    <div class="col-md-12">
+        <div class="page-header">
+            <h2><img src="assets/galaxy-logo.png" alt="galaxy" style="width: 30px; height: 30px;"/> 银河</h2>
+        </div>
 
-        <p>提供全套文物保护方案
-        <ul>
-            <li>环境监控</li>
-            <li>本体监测</li>
-            <li>资产管理</li>
-            <li>人员管理</li>
-        </ul>
-        </p>
+        <h3>提供全套文物保护方案</h3>
+        <div class="row">
+           <div class="col-md-3">
+               <h4>环境监控</h4>
+               <ul>
+                   <li>环境数据了如指掌</li>
+               </ul>
+           </div>
 
-        部署方式
-        在云端，我们负责
-        使用你的服务器
+            <div class="col-md-3">
+                <h4>本体监测</h4>
+                <ul>
+                    <li>裂隙监测</li>
+                    <li>宏观监测</li>
+                    <li>红外图像</li>
+                </ul>
+            </div>
 
-        如何工作
+            <div class="col-md-3">
+                <h4>资产管理</h4>
+            </div>
+
+            <div class="col-md-3">
+                <h4>人员管理</h4>
+            </div>
+        </div>
+
+        <h3 class="m-t-100">部署方式</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <i class="fa fa-cloud" style="font-size: 12em;"></i>
+                <span style="font-size:2em; vertical-align: middle;">在云端，我们负责</span>
+            </div>
+
+            <div class="col-md-6">
+                <i class="fa fa-hdd-o" style="font-size: 12em;"></i>
+                <span style="font-size:2em;">使用你的服务器</span>
+            </div>
+        </div>
+
+        <h3 class="m-t-100">如何工作</h3>
         银河 <- 网关 <- 监测设备
         银河 <- IO模块
         银河 <- 读卡器 <- 激发器
 
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            </ol>
+        <div class="row">
+            <!--
+            <div class="col-md-5">
+            <script async class="speakerdeck-embed" data-id="68f61e8066e70131239b1ed4354c453c" data-ratio="1.41436464088398" src="//speakerdeck.com/assets/embed.js"></script>
+            </div>
+            -->
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src="{{site.url}}/assets/galaxy-preview.jpg" alt="galaxy">
-                </div>
-                <div class="item">
-                    <img src="{{site.url}}/assets/galaxy-preview2.jpg" alt="galaxy">
+            <div class="col-md-offset-2 col-md-6">
+
+
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="{{site.url}}/assets/galaxy-preview.jpg" alt="galaxy">
+                        </div>
+                        <div class="item">
+                            <img src="{{site.url}}/assets/galaxy-preview2.jpg" alt="galaxy">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
                 </div>
             </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
         </div>
     </div>
+</div>
 
 
-
-
-
-    <div class="col-md-6">
-        <h2>移动应用</h2>
+<div class="row">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h2>移动应用</h2>
+        </div>
 
         <p>
             随时随地访问银河
@@ -67,6 +109,7 @@ title: 首页
             <div class="row">
                 <div class="col-md-4">
                     <img src="assets/android.png" alt="android" style="width: 100px; height: 100px;"/>
+
                     <div>版本：v1.0.0</div>
                     <div class="text-muted">支持安卓2.3以上版本</div>
                 </div>
