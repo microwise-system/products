@@ -3,7 +3,7 @@ layout: default
 title: 银河
 ---
 
-<div class="row">
+<div class="row" style="border-bottom: 1px solid #ddd;">
     <div class="col-md-4">
         <h2 style="margin-top: 0;">银河</h2>
     </div>
@@ -11,6 +11,7 @@ title: 银河
         <div class="btn-group pull-right">
             <a type="button" class="btn btn-default">概述</a>
             <a type="button" class="btn btn-default">功能</a>
+            <a type="button" class="btn btn-default">部署</a>
             <a type="button" class="btn btn-default">版本日志</a>
         </div>
     </div>
@@ -29,5 +30,66 @@ title: 银河
             <li>数据分析</li>
         </ul>
         </p>
+
+        <h3 class="m-t-100">部署方式</h3>
+
+        <div class="row">
+            <div class="col-md-offset-2 col-md-10">
+                <span style="font-size:4em;">
+                    <i class="fa fa-cloud"></i> 在云端，我们负责</span>
+            </div>
+        </div>
+
+        <div class="row m-t-20">
+            <div class="col-md-offset-2 col-md-10">
+                <span style="font-size:4em;">
+                <i class="fa fa-hdd-o"></i> 使用你的服务器</span>
+            </div>
+        </div>
+
+
+
+        <h3 class="m-t-100">如何工作</h3>
+        银河 <- 网关 <- 监测设备
+        银河 <- IO模块
+        银河 <- 读卡器 <- 激发器
+
+        <div class="row">
+            <!--
+            -->
+            <div class="col-md-5">
+            <script async class="speakerdeck-embed" data-id="68f61e8066e70131239b1ed4354c453c" data-ratio="1.41436464088398" src="//speakerdeck.com/assets/embed.js"></script>
+            </div>
+
+            <div class="col-md-offset-1 col-md-6">
+
+
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="{{site.url}}/assets/galaxy-preview.jpg" alt="galaxy">
+                        </div>
+                        <div class="item">
+                            <img src="{{site.url}}/assets/galaxy-preview2.jpg" alt="galaxy">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
