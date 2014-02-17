@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 首页
+title: 手机应用
 ---
 
 <div class="row">
@@ -21,20 +21,20 @@ title: 首页
             <div class="row">
                 <div class="col-md-4">
                     <img src="{{site.url}}/assets/android.png" alt="android" style="width: 100px; height: 100px;"/>
-                    <div>版本：v1.0.4</div>
+                    <div>版本：v{{site.data.encke.current_version}}</div>
                     <div class="text-muted">支持安卓2.3以上版本</div>
                 </div>
 
                 <div class="col-md-4">
                     <div>
-                        <img src="{{site.url}}/downloads/encke/qrcode-1.0.4.png" alt="qrcode"
+                        <img src="{{site.url}}/downloads/encke/qrcode-{{site.data.encke.current_version}}.png" alt="qrcode"
                              style="width: 150px; height: 150px;"/>
                         手机扫描下载
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <a href="http://microwise.u.qiniudn.com/encke-1.0.4.apk" class="btn btn-primary">手动下载</a>
+                    <a href="{{site.data.encke.download_source}}/encke-{{site.data.encke.current_version}}.apk" class="btn btn-primary">手动下载</a>
                 </div>
             </div>
         </div>
@@ -46,32 +46,16 @@ title: 首页
 
         <h4>版本日志</h4>
         <ul>
-			<li><strong>1.0.4</strong> 2014-02-17
+            {% for version in site.data.encke.versions %}
+            <li>
+                <strong style="font-size: 1.2em;">{{ version.name }}</strong> {{ version.date }}
                 <ul>
-                    <li>添加用户反馈功能</li>
-                    <li>更新系统功能图标</li>
-                    <li>深度优化设备实时数据页面</li>
+                    {% for log in version.logs %}
+                    <li>{{ log }}</li>
+                    {% endfor %}
                 </ul>
             </li>
-            <li><strong>1.0.3</strong> 2014-02-11
-                <ul>
-                    <li>升级友盟自动更新组件</li>
-                    <li>修复设备名称显示错误</li>
-                    <li>隐藏功能菜单中的无效选项</li>
-                </ul>
-            </li>
-            <li><strong>1.0.1</strong> 2014-02-10
-                <ul>
-                    <li>美化UI</li>
-                    <li>添加查看区域及设备数据功能</li>
-                </ul>
-            </li>
-            <li><strong>1.0.0</strong> 2014-01-17
-                <ul>
-                    <li>首个版本</li>
-                </ul>
-            </li>
-
+            {% endfor %}
         </ul>
     </div>
 </div>

@@ -1,0 +1,27 @@
+current_version: 1.0.4
+download_source: http://microwise.u.qiniudn.com
+versions:
+  - name: 1.0.4
+    date: 2014-02-17
+    logs:
+      - 添加用户反馈功能
+      - 更新系统功能图标
+      - 深度优化设备实时数据页面
+
+  - name: 1.0.3
+    date: 2014-02-11
+    logs:
+      - 升级友盟自动更新组件</li>
+      - 修复设备名称显示错误</li>
+      - 隐藏功能菜单中的无效选项</li>
+
+  - name: 1.0.1
+    date: 2014-02-10
+    logs:
+      - 美化UI
+      - 添加查看区域及设备数据功能
+
+  - name: 1.0.0
+    date: 2014-01-17
+    logs:
+      - 首个版本

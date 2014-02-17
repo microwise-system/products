@@ -61,20 +61,20 @@ title: 首页
                         <div class="col-md-4">
                             <img src="assets/android.png" alt="android" style="width: 100px; height: 100px;"/>
 
-                            <div>版本：v1.0.4</div>
+                            <div>版本：v{{site.data.encke.current_version}}</div>
                             <div class="text-muted">支持安卓2.3以上版本</div>
                         </div>
 
                         <div class="col-md-4">
                             <div>
-                                <img src="{{site.url}}/downloads/encke/qrcode-1.0.4.png" alt="qrcode"
+                                <img src="{{site.url}}/downloads/encke/qrcode-{{site.data.encke.current_version}}.png" alt="qrcode"
                                      style="width: 150px; height: 150px;"/>
                                 手机扫描下载
                             </div>
                         </div>
 
                         <div class="col-md-4">
-                            <a href="http://microwise.u.qiniudn.com/encke-1.0.4.apk" class="btn btn-primary">手动下载</a>
+                            <a href="{{site.data.encke.download_source}}/encke-{{site.data.encke.current_version}}.apk" class="btn btn-primary">手动下载</a>
                         </div>
                     </div>
                 </div>
