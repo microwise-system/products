@@ -1,6 +1,13 @@
-current_version: 1.0.4
+current_version: 1.0.5
 download_source: http://microwise.u.qiniudn.com
 versions:
+  - name: 1.0.5
+    date: 2014-02-24
+    logs:
+      - 添加站点及区域列表离线查看功能
+      - 添加应用版本信息查询
+      - 调整区域设备切换动画
+
   - name: 1.0.4
     date: 2014-02-17
     logs:
