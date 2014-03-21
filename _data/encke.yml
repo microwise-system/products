@@ -1,6 +1,13 @@
 current_version: 1.0.5
 download_source: http://microwise.u.qiniudn.com
 versions:
+  - name: 1.0.7
+    date: 2014-03-21
+    logs:
+      - 添加本体监测摄像机管理
+      - 添加人员实时分布
+      - 集成二维码扫描程序
+
   - name: 1.0.5
     date: 2014-02-24
     logs:
