@@ -1,1 +1,3 @@
-_site.idea/*.iml
+_site
+.idea/
+.iml
