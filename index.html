@@ -68,7 +68,7 @@ title: 首页
                         <div class="col-md-4">
                             <div>
                                 <img src="{{site.url}}/downloads/encke/qrcode-{{site.data.encke.current_version}}.png" alt="qrcode"
-                                     style="width: 150px; height: 150px;"/>
+                                style="width: 150px; height: 150px;"/>
                                 手机扫描下载
                             </div>
                         </div>
@@ -90,3 +90,17 @@ title: 首页
 
     </div>
 </div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>博客</h3>
+        <ul>
+            {% for post in site.posts reversed %}
+            <li>
+                <span class="text-muted">{{ post.date | date:'%Y-%m-%d' }}</span>
+                <a href="{{post.url}}">{{post.title}}</a></li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>

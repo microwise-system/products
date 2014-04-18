@@ -2,8 +2,15 @@
 layout: default
 ---
 <h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<p class="meta">
+{{ page.date | date:'%Y-%m-%d' }} {{page.author}}
+	<ul class="list-inline">
+		{% for category in page.categories %}
+		<li>{{category}}</li>
+		{% endfor %}
+	</ul>
+</p>
 
 <div class="post">
-{{ content }}
+	{{ content }}
 </div>
