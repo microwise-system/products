@@ -1,1 +1,1 @@
-[[如何添加博客]]
+[如何添加博客](https://github.com/microwise-system/products/wiki/如何添加博客)
