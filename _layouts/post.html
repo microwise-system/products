@@ -4,11 +4,9 @@ layout: default
 <h2>{{ page.title }}</h2>
 <p class="meta">
 {{ page.date | date:'%Y-%m-%d' }} {{page.author}}
-	<ul class="list-inline">
-		{% for category in page.categories %}
-		<li>{{category}}</li>
-		{% endfor %}
-	</ul>
+{% for category in page.categories %}
+<span class="badge badge-default">{{category}}</span>
+{% endfor %}
 </p>
 
 <div class="post">

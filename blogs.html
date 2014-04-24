@@ -1,0 +1,25 @@
+---
+layout: default
+title: 首页
+---
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>博客</h3>
+        <ul>
+            {% for post in site.posts %}
+            <li class="m-v-10">
+                <span class="text-muted">{{ post.date | date:'%Y-%m-%d' }}</span>
+                <a href="{{post.url}}" style="font-size: 1.4em;">{{post.title}}</a>
+                <div>
+                    @{{post.author}}
+                    {% for category in post.categories %}
+                    <span class="label label-default">{{category}}</span>
+                    {% endfor %}
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+</div>
