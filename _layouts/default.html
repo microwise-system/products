@@ -46,9 +46,24 @@
                 <li><a href="{{site.url}}/encke/">移动应用</a></li>
                 <li><a href="{{site.url}}/devices/">监控设备</a></li>
             </ul>
-            <ul class="nav navbar-nav pull-right">
+
+            <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{site.url}}/blogs.html">博客</a></li>
             </ul>
+
+            <!-- Search Google -->
+            <form class="navbar-form navbar-right" role="search" method="get" action="http://www.google.com/search">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="q" maxlength="255" value="" placeholder="搜索"/>
+                </div>
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="hidden" name="oe" value="UTF-8" />
+                <input type="hidden" name="hl" value="zh-CN" />
+                <input type="hidden" name="domains" value="http://products.microwise-system.com" />
+                <input type="hidden" name="sitesearch" value="products.microwise-system.com" />
+                <input type="hidden" name="btnG" value="Google Search" />
+            </form>
+            <!-- Search Google -->
         </div>
         <!-- /.navbar-collapse -->
     </div>
