@@ -4,4 +4,7 @@ mirror_url: http://products-mw-mirror.qiniudn.com
 safe: true
 lsi: false
 markdown: redcarpet
-pygments: true
+highlighter: pygments
+
+gems:
+  - jekyll-sitemap
