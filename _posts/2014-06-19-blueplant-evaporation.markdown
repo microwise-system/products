@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "系统管理新闻添加上传图片视频功能"
+title:  "环境监控添加蒸发量功能"
 categories: galaxy
 author: "许月希"
 ---
 
-在系统管理的新闻功能中添加上传图片和视频的功能，可以支持网络图片，网络视频，上传图片和上传视频功能，视频格式推荐swf格式
+在环境监控中添加了蒸发量的功能，可以以年，月，自定义时间段查询统计的蒸发量，同时会显示，近一天，近一周，近一月，近三月，近半年，近一年的蒸发量
 
-![]({{site.mirror_url}}/assets/uploads/2014-06-11-blackhole-addPost-view.jpg)
+![]({{site.mirror_url}}/assets/uploads/2014-06-19-blueplant-evaporation.jpg)
 
 
