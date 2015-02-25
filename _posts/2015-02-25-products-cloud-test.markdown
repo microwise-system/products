@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "元智产品生命周期"
+title:  "test"
 categories: galaxy
-author: "王耕"
+author: "wanggeng"
 ---
