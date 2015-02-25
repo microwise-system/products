@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "位置点相关功能"
+title:  "位置点相关功能test"
 categories: galaxy
-author: "许月希"
+author: "王耕"
 ---
 
   大家好，我们已经完成了位置点的开发。
