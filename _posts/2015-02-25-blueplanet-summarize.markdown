@@ -1,38 +1,38 @@
----
+ï»¿---
 layout: post
-title:  "×ÜÀÀ¹¦ÄÜ"
+title:  "æ€»è§ˆåŠŸèƒ½"
 categories: galaxy
-author: "Íõ¸û"
+author: "ç‹è€•"
 ---
 
-  Õ¾µã×ÜÀÀ¹¦ÄÜÖ÷Òª·´Ó³Ò»¸öÕ¾µãµÄÄ³Ğ©Ö¸±êµÄ´óÌåµÄÇé¿ö
-  °üÀ¨ÒÔÏÂ¹¦ÄÜ
+  ç«™ç‚¹æ€»è§ˆåŠŸèƒ½ä¸»è¦åæ˜ ä¸€ä¸ªç«™ç‚¹çš„æŸäº›æŒ‡æ ‡çš„å¤§ä½“çš„æƒ…å†µ
+  åŒ…æ‹¬ä»¥ä¸‹åŠŸèƒ½
   
-  Éè±¸×´¿ö±ıÍ¼
+  è®¾å¤‡çŠ¶å†µé¥¼å›¾
   
   ![]({{site.mirror_url}}/assets/uploads/2015-02-25-summarize-pie.jpg)
   
-  ÇøÓòÎÈ¶¨ĞÔÍ¼±í
+  åŒºåŸŸç¨³å®šæ€§å›¾è¡¨
   
    ![]({{site.mirror_url}}/assets/uploads/2015-02-25-summarize-stability.jpg)
   
-  ÎÂ¶ÈÈÕ¾ùÖµÍ³¼Æ
+  æ¸©åº¦æ—¥å‡å€¼ç»Ÿè®¡
   
    ![]({{site.mirror_url}}/assets/uploads/2015-02-25-summarize-daytemp.jpg)
   
-  ÊµÊ±ÎÂ¶ÈÊı¾İÍ¼±í
+  å®æ—¶æ¸©åº¦æ•°æ®å›¾è¡¨
   
    ![]({{site.mirror_url}}/assets/uploads/2015-02-25-summarize-realtimetemp.jpg)
   
-  ÊµÊ±Êª¶ÈÊı¾İÍ¼±í
+  å®æ—¶æ¹¿åº¦æ•°æ®å›¾è¡¨
   
    ![]({{site.mirror_url}}/assets/uploads/2015-02-25-summarize-realtimehumidity.jpg)
    
-   ÀÛ»ı¹âÕÕ
+   ç´¯ç§¯å…‰ç…§
    
    ![]({{site.mirror_url}}/assets/uploads/2015-02-25-summarize-light.jpg)
   
-  ¶şÑõ»¯Ì¼Å¨¶ÈÊı¾İÍ¼±í
+  äºŒæ°§åŒ–ç¢³æµ“åº¦æ•°æ®å›¾è¡¨
   
    ![]({{site.mirror_url}}/assets/uploads/2015-02-25-summarize-co2.jpg)
   
