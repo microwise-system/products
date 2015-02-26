@@ -5,14 +5,14 @@ categories: galaxy
 author: "王耕"
 ---
 
-  站点总览功能主要反映一个站点的某些监测指标的大体的情况
+  大家好，站点总览功能主要反映一个站点的某些监测指标的大体的情况
   包括以下功能
   
-  设备状况饼图
+  设备状况饼图，反应站点下设备的实时运行状态
   
   ![]({{site.mirror_url}}/assets/uploads/2015-02-25-summarize-pie.jpg)
   
-  区域稳定性图表
+  区域稳定性图表，反应了站点的温湿度稳定性
   
    ![]({{site.mirror_url}}/assets/uploads/2015-02-25-summarize-stability.jpg)
   
