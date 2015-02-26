@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "你好，世界"
+title:  "元智产品生命周期"
 categories: galaxy
-author: "高辉"
+author: "王耕"
 ---
 
 大家好，这是我们的第一篇博客。
