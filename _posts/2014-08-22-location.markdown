@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "位置点相关功能1"
-categories: galaxy1
-author: "许月希1"
+title:  "位置点相关功能"
+categories: galaxy
+author: "许月希"
 ---
 
   大家好，我们已经完成了位置点的开发。
