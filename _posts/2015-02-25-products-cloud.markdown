@@ -1,8 +1,8 @@
 ﻿---
 layout: post
-title:  "元智产品生命周期"
+title:  "位置点相关功能"
 categories: galaxy
-author: "王耕"
+author: "许月希"
 ---
 
 **总体设计**
