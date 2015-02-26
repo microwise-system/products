@@ -7,7 +7,7 @@ author: "王耕"
 
 **总体设计**
 
-  元智产品生命周期管理系统主要业务将在Galaxy Online上实现与Galaxy系统无关，但相互之间会存在数据通信。online地址：http://cloud.microwise-system.com/
+  元智产品生命周期管理系统主要业务将在Galaxy Online上实现与Galaxy系统无关，但相互之间会存在数据通信。online地址：http://cloud.microwise-system.com
   早期未对出厂设备进行管理，所以公司产品销往何处，运行状况如何一直无法跟踪，且维护麻烦（公式配置等），不能进行统一配置管理，该功能需要实现将出厂产品进行统一管理，统一配置。
   该系统目前主要是公司内部人员使用，不排除以后有其他人员使用。
   
