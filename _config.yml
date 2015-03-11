@@ -1,6 +1,5 @@
 name: 元智系统产品
-# url: http://products.microwise-system.com
-url: http://localhost:4000
+url: http://products.microwise-system.com
 mirror_url: http://products-mw-mirror.qiniudn.com
 safe: true
 lsi: false
