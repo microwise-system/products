@@ -6,17 +6,50 @@ title: 首页
 <div class="row">
     <div class="col-md-12">
         <h3>博客</h3>
-        <ul>
+        <ul class="list-unstyled">
             {% for post in site.posts %}
-            <li class="m-v-10">
-                <span class="text-muted">{{ post.date | date:'%Y-%m-%d' }}</span>
-                <a href="{{post.url}}" style="font-size: 1.4em;">{{post.title}}</a>
-                <div>
-                    @{{post.author}}
-                    {% for category in post.categories %}
-                    <span class="label label-default">{{category}}</span>
+            <li class="p-v-30">
+
+                <div class="row">
+
+                  <div class="col-xs-4 text-right">
+                    {% assign foundImage = 0 %}
+                    {% assign images = post.content | split:"<img " %}
+                    {% for image in images %}
+                    {% if image contains 'src' %}
+                    {% if foundImage == 0 %}
+                    {% assign html = image | split:">" | first %}
+                    <img {{ html }} class="img-thumbnail" style="max-height: 200px;"/>
+                    {% assign foundImage = 1 %}
+                    {% endif %}
+                    {% endif %}
                     {% endfor %}
+                  </div>
+
+                  <div class="col-xs-8">
+                    <a href="{{post.url}}">
+                      <h3 class="m-t-0" style="font-size: 20px;">{{post.title}}</h3>
+                    </a>
+
+                    <div>
+                      <span class="text-muted">{{ post.date | date:'%Y-%m-%d' }}</span>
+
+                      <span class="text-muted">
+                        作者: {{post.author}}
+                      </span>
+
+                      <span class="text-muted">
+                      分类:
+                      {% for category in post.categories %}
+                      <span>{{category}}</span>
+                      {% endfor %}
+                      </span>
+
+                      <p>{{ post.excerpt | strip_html }} ...</p>
+                    </div>
+                  </div>
                 </div>
+
             </li>
             {% endfor %}
         </ul>
