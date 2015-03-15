@@ -48,7 +48,7 @@ title: 手机应用
         <ul>
             {% for version in site.data.encke.versions %}
             <li>
-                <strong style="font-size: 1.2em;">{{ version.name }}</strong> {{ version.date }}
+                <strong style="font-size: 1.2em;">{{ version.name }}</strong> <span class="text-muted" style="margin-left: 10px;">{{ version.date }}</span>
                 <ul>
                     {% for log in version.logs %}
                     <li>{{ log }}</li>
