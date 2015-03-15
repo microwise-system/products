@@ -7,17 +7,19 @@ title: 首页
   <div class="col-md-12">
     <h3>博客</h3>
     <ul class="list-unstyled">
+
+      <!-- 获取文章中第一个图片 -->
       {% for post in site.posts %}
-      {% assign foundImage = 0 %}
-      {% assign firstImage = '' %}
-      {% assign images = post.content | split:"<img " %}
-      {% for image in images %}
-      {% if image contains 'src' %}
-      {% if foundImage == 0 %}
-      {% assign firstImage = image | split:">" | first %}
-      {% assign foundImage = 1 %}
-      {% endif %}
-      {% endif %}
+        {% assign foundImage = 0 %}
+        {% assign firstImage = '' %}
+        {% assign images = post.content | split:"<img " %}
+        {% for image in images %}
+          {% if image contains 'src' %}
+            {% if foundImage == 0 %}
+              {% assign firstImage = image | split:">" | first %}
+              {% assign foundImage = 1 %}
+            {% endif %}
+          {% endif %}
       {% endfor %}
 
       <li>
@@ -34,26 +36,28 @@ title: 首页
               </div>
               <div class="panel-body">
 
-                <span class="text-muted">{{ post.date | date:'%Y-%m-%d' }}</span>
+                <div style="margin-bottom: 10px;">
+                  <span class="text-muted">{{ post.date | date:'%Y-%m-%d' }}</span>
 
-                      <span class="text-muted">
-                        作者: {{post.author}}
-                      </span>
+                  <span class="text-muted">
+                    作者: {{post.author}}
+                  </span>
 
-                      <span class="text-muted">
-                      分类:
-                      {% for category in post.categories %}
-                      <span>{{category}}</span>
-                      {% endfor %}
-                      </span>
+                  <span class="text-muted">
+                  分类:
+                  {% for category in post.categories %}
+                  <span>{{category}}</span>
+                  {% endfor %}
+                  </span>
+                </div>
 
                 <div>
                   {% if firstImage != '' %}
-                  <img {{ firstImage }} class="img-thumbnail" style="max-height: 200px;"/>
+                  <img {{ firstImage }} style="height: auto; max-width: 100%; max-height: 800px; margin-bottom: 10px;"/>
                   {% endif %}
                 </div>
 
-                <p>{{ post.excerpt | strip_html | truncate 50 }}</p>
+                <p class="text-muted">{{ post.excerpt | strip_html | truncate 50 }}</p>
 
               </div>
             </div>
@@ -76,18 +80,20 @@ title: 首页
             </a>
 
             <div>
-              <span class="text-muted">{{ post.date | date:'%Y-%m-%d' }}</span>
+              <div style="margin-bottom: 10px;">
+                <span class="text-muted">{{ post.date | date:'%Y-%m-%d' }}</span>
 
-                      <span class="text-muted">
-                        作者: {{post.author}}
-                      </span>
+                <span class="text-muted">
+                  作者: {{post.author}}
+                </span>
 
-                      <span class="text-muted">
-                      分类:
-                      {% for category in post.categories %}
-                      <span>{{category}}</span>
-                      {% endfor %}
-                      </span>
+                <span class="text-muted">
+                分类:
+                {% for category in post.categories %}
+                <span>{{category}}</span>
+                {% endfor %}
+                </span>
+              </div>
 
               <p>{{ post.excerpt | strip_html }} ...</p>
             </div>
