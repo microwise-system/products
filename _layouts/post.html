@@ -2,12 +2,13 @@
 layout: default
 ---
 <h2>{{ page.title }}</h2>
-<p class="meta">
+<p class="meta text-muted">
 {{ page.date | date:'%Y-%m-%d' }} {{page.author}}
 {% for category in page.categories %}
-<span class="badge badge-default">{{category}}</span>
+<span>{{category}}</span>
 {% endfor %}
 </p>
+<hr/>
 
 <div class="post">
 	{{ content }}
