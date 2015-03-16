@@ -9,3 +9,10 @@ encoding: "utf-8"
 
 gems:
   - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
