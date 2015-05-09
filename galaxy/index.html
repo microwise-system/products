@@ -97,16 +97,26 @@ title: 银河
 <div id="changelog" class="row">
     <div class="col-md-12">
         <h3>版本日志</h3>
+        <!-- 
+        	业务系统class说明
+        	blueplanet: 使用label-info样式
+        	其他业务系统：不使用样式
+        -->
         <ul>
             <li>
                 2.3 [开发中] 
                 <ul>
-                    <li>添加控制面板功能，支持控制模块新设备</li>
-                    <li>移植本体监测红外摄像机所有功能</li>
-                    <li>添加阈值报警策略，并自动添加我的任务</li>
-                    <li>站点业务系统开关</li>
-                    <li>站点权限开关</li>
-                    <li>添加中间件对TCP支持</li>
+                    <li><span class="label label-info">环境监控</span>添加控制面板功能，支持控制模块新设备</li>
+                    <li>本体监测 移植红外摄像机所有功能</li>
+                    <li><span class="label label-info">环境监控</span>添加阈值报警策略，并自动添加我的任务</li>
+                    <li>系统管理 站点业务系统开关，独立站点支持全局权限开关</li>
+                    <li><span class="label label-info">环境监控中间件</span>添加对TCP通讯模式的<abbr title="注意：仅1.3协议，暂不支持V3协议" class="initialism">支持</abbr></li>
+                    <li><span class="label label-info">环境监控</span>均峰值查看及均值比较功能</li>
+                    <li>藏品管理 支持全文检索、自定义标签功能，同时优化了藏品信息的查询方式，支持藏品属性的编辑</li>
+                    <li>外展管理 历史数据添加外站报警记录查询功能，发送短信添加位置信息</li>
+                    <li>本体监测中间件 优化状态查询页</li>
+                    <li><span class="label label-info">环境监控</span>位置点管理 正在推进</li>
+                    <li>档案管理系统</li>
                 </ul>
             </li>
             <li>2.2

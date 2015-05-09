@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }} - {{site.name}}</title>
-    <meta name="viewport" content="width=device-width">
     <meta name="description" content="提供全套文物保护方案">
     <meta name="keywords" content="元智系统, 文物保护, 环境监测, 环境监控">
 
     <link rel="icon" type="image/x-icon" href="{{site.url}}/favicon.ico">
-    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="http://libs.baidu.com/fontawesome/4.0.3/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="{{site.url}}/assets/common-css-0.1.2/common.min.css"/>
     <style type="text/css">
@@ -44,10 +44,9 @@
             <ul class="nav navbar-nav">
                 <li><a href="{{site.url}}/galaxy/">银河</a></li>
                 <li><a href="{{site.url}}/encke/">移动应用</a></li>
-                <li><a href="{{site.url}}/devices/">监控设备</a></li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
+                <!--
+                  <li><a href="{{site.url}}/devices/">监控设备</a></li>
+                -->
                 <li><a href="{{site.url}}/blogs.html">博客</a></li>
             </ul>
 
@@ -77,19 +76,14 @@
 <div class="footer">
     <div class="container m-t-20 p-v-50">
         <div class="row">
-            <div class="col-md-4">&copy; 2014 元智系统 | <a href="http://microwise-system.github.io/hao123/">网址大全</a></div>
+            <div class="col-md-4 col-sm-4">&copy; 2015 <a href="http://www.microwise-system.com">元智系统</a> | <a href="http://microwise-system.github.io/hao123/">网址大全</a></div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-4">
                 <i class="fa fa-weibo"></i> 微博： <a href="http://weibo.com/u/3175063310">microwise-system西安</a>
                 <br>
-                <div>
-                <img src="{{site.url}}/assets/weibo-qrcode.png" alt="" style="float:left; width: 100px; height: 100px;"/>
-                <span style="float: left; padding-left: 10px; width: 70px;">
-                <wb:follow-button uid="3175063310" type="red_1" width="67" height="24"></wb:follow-button>
-                </span>
-                </div>
+                <img src="{{site.url}}/assets/weibo-qrcode.png" alt="" style="width: 100px; height: 100px;"/>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-4">
                 微信： microwise_Coltd
                 <br>
                 <img src="{{site.url}}/assets/weixin-qrcode.jpg" alt="" style="width: 100px; height: 100px;"/>

@@ -4,22 +4,105 @@ title: 首页
 ---
 
 <div class="row">
-    <div class="col-md-12">
-        <h3>博客</h3>
-        <ul>
-            {% for post in site.posts %}
-            <li class="m-v-10">
-                <span class="text-muted">{{ post.date | date:'%Y-%m-%d' }}</span>
-                <a href="{{post.url}}" style="font-size: 1.4em;">{{post.title}}</a>
-                <div>
-                    @{{post.author}}
-                    {% for category in post.categories %}
-                    <span class="label label-default">{{category}}</span>
-                    {% endfor %}
-                </div>
-            </li>
-            {% endfor %}
-        </ul>
+  <div class="col-md-12">
+    <h3>博客</h3>
+    <ul class="list-unstyled">
 
-    </div>
+      <!-- 获取文章中第一个图片 -->
+      {% for post in site.posts %}
+        {% assign foundImage = 0 %}
+        {% assign firstImage = '' %}
+        {% assign images = post.content | split:"<img " %}
+        {% for image in images %}
+          {% if image contains 'src' %}
+            {% if foundImage == 0 %}
+              {% assign firstImage = image | split:">" | first %}
+              {% assign foundImage = 1 %}
+            {% endif %}
+          {% endif %}
+      {% endfor %}
+
+      <li>
+
+        <!-- 手机平板 -->
+        <div class="row hidden-md hidden-lg">
+          <div class="col-xs-12 m-t-10">
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <a href="{{post.url}}">
+                  <h4 class="m-v-0" style="font-size: 20px;">{{post.title}}</h4>
+                </a>
+              </div>
+              <div class="panel-body">
+
+                <div style="margin-bottom: 10px;">
+                  <span class="text-muted">{{ post.date | date:'%Y-%m-%d' }}</span>
+
+                  <span class="text-muted">
+                    作者: {{post.author}}
+                  </span>
+
+                  <span class="text-muted">
+                  分类:
+                  {% for category in post.categories %}
+                  <span>{{category}}</span>
+                  {% endfor %}
+                  </span>
+                </div>
+
+                <div>
+                  {% if firstImage != '' %}
+                  <img {{ firstImage }} style="height: auto; max-width: 100%; max-height: 800px; margin-bottom: 10px;"/>
+                  {% endif %}
+                </div>
+
+                <p class="text-muted">{{ post.excerpt | strip_html | truncate 50 }}</p>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 电脑 -->
+        <div class="row hidden-xs hidden-sm p-v-30">
+
+          <div class="col-md-4 text-right">
+            {% if firstImage != '' %}
+            <img {{ firstImage }} class="img-thumbnail" style="max-height: 200px;"/>
+            {% endif %}
+          </div>
+
+          <div class="col-md-8">
+            <a href="{{post.url}}">
+              <h3 class="m-t-0" style="font-size: 20px;">{{post.title}}</h3>
+            </a>
+
+            <div>
+              <div style="margin-bottom: 10px;">
+                <span class="text-muted">{{ post.date | date:'%Y-%m-%d' }}</span>
+
+                <span class="text-muted">
+                  作者: {{post.author}}
+                </span>
+
+                <span class="text-muted">
+                分类:
+                {% for category in post.categories %}
+                <span>{{category}}</span>
+                {% endfor %}
+                </span>
+              </div>
+
+              <p>{{ post.excerpt | strip_html }} ...</p>
+            </div>
+          </div>
+        </div>
+
+      </li>
+      {% endfor %}
+    </ul>
+
+  </div>
 </div>
