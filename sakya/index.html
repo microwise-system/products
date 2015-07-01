@@ -1,8 +1,119 @@
 ---
-layout: default
+layout: blank
 title: 区域中心客户端
 ---
 
-<div class="row">
-  <div class="col-md-12">敬请期待</div>
+<style>
+  body {
+    background: no-repeat center url('../assets/sakya/bg.jpg');
+  }
+
+  .preview-img {
+    max-height: 500px;
+  }
+
+  .preview-slide {
+    position: absolute;
+  left: 34%;
+  right: 50%;
+  top: 56px;
+  width: 220px;
+  }
+
+  .logo-img {
+    max-width: 350px;
+  }
+
+  .logo-img-xs {
+    max-width: 200px;
+  }
+
+  .dl-img, .qr-img {
+    width: 150px;
+  }
+
+  .qr-img {
+    width: 150px;
+    padding: 10px;
+  }
+
+  .fixed-bottom-bar {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+</style>
+
+<nav class="navbar navbar-static-top" role="navigation">
+  <div class="container">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{site.url}}/sakya/" style="font-weight: bold; color: white;">监控中心客户端</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="{{site.url}}">←回首页</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+</nav>
+
+<div class="sakya-bg">
+  <div class="container">
+    <div class="row hidden-xs">
+      <div class="col-sm-7" style="text-align: center; position: relative;">
+        <img class="2preview-img" src="{{site.url}}/assets/sakya/iphone_preview.gif" alt="preview" style="width: 230px;" />
+      </div>
+      <div class="col-sm-5" style="padding-top: 30px;">
+        <img class="logo-img" src="{{site.url}}/assets/sakya/logo.png" alt="" />
+
+        <div class="row" style="margin-top: 50px;">
+          <div class="col-xs-5">
+            <img class="dl-img" src="{{site.url}}/assets/sakya/iphone.png" alt="" />
+          </div>
+          <div class="col-xs-5">
+            <a href="{{site.data.sakya.android_dl}}" target="_blank">
+              <img class="dl-img" src="{{site.url}}/assets/sakya/android.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-xs-5">
+            即将上线，敬请期待
+          </div>
+
+          <div class="col-xs-5">
+            <img class="qr-img" src="{{site.url}}/assets/sakya/qr_weiyun.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row visible-xs-block" style="padding-bottom: 60px;">
+      <div class="col-xs-12" style="padding-bottom: 30px; text-align: center;">
+        <img class="logo-img-xs" src="{{site.url}}/assets/sakya/logo.png" alt="" />
+      </div>
+      <div class="col-xs-12" style="text-align: center;">
+        <img class="2preview-img" src="{{site.url}}/assets/sakya/iphone_preview.gif" alt="preview" />
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed-bottom-bar visible-xs-block" style="text-align: center; padding: 10px;">
+    <a href="#" class="btn btn-default">iOS下载</a>
+    <a href="{{site.data.sakya.android_dl}}" target="_blank" class="btn btn-primary">安卓下载</a>
+  </div>
 </div>
