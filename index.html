@@ -3,7 +3,7 @@ layout: default
 title: 首页
 ---
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-12">
         <div class="page-header">
             <h2><img src="assets/galaxy-logo.png" alt="galaxy" style="width: 30px; height: 30px;"/> 银河 <small>提供全套文物保护方案</small> </h2>
@@ -91,6 +91,40 @@ title: 首页
     </div>
 </div>
 
+-->
+
+<style>
+    body{
+      background-image:url("../assets/index/bggradient.png")；
+      background-repeat:no-repeat;
+    }
+    /*.top{
+      text-align: center;
+      margin-top: 100px ;
+      padding-left: 50px
+    }*/
+    .bottom{
+      text-align: center;
+      margin-top: 50px ;
+    }
+
+</style>
+<div class="row">
+  <div class="col-md-6" style="text-align:right">
+      <a href="{{site.url}}/galaxy/">
+        <img src="../assets/index/2.png" style="margin-right:50px">
+      </a>
+  </div>
+  <div class="col-md-6">
+    <a href="{{site.url}}/sakya/">
+      <img src="../assets/index/1.png" style="margin-left:50px;">
+    </a>
+  </div>
+</div>
+
+<div class="bottom">
+  <img src="../assets/index/mac.png">
+</div>
 <div class="row">
     <div class="col-md-12">
         <a href="/blogs.html"><h3>博客</h3></a>
@@ -102,6 +136,5 @@ title: 首页
             </li>
             {% endfor %}
         </ul>
-
     </div>
 </div>
