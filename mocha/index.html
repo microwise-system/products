@@ -1,0 +1,117 @@
+---
+layout: blank
+title: 元智魔卡
+description: 元智魔卡是一款文物展示类AR增强现实APP。你只需用你的手机摄像头扫描案例所示的明信片就可以出现相应的三维模型文物显示、文物历史概览视频，文物复原，用手指点击屏幕，就可以实现对相应模型的缩放旋转，赶快与千百年来的稀有文物来互动吧！
+keywords: 魔卡,元智魔卡,AR魔卡,增强现实,文物展示
+---
+
+<style>
+body {
+  /* background-color: #545bee; */
+  background-color: white;
+}
+
+.big-container {
+  min-height: 500px;
+  height: 100%;
+  position: relative;
+}
+
+.fixed-bottom-bar {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .app-container {
+    padding-bottom: 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .app-wrapper {
+    margin-top: 50px;
+  }
+
+ .app-info {
+    margin-top: 50px;
+  }
+}
+
+.dl-img, .qr-img {
+  width: 150px;
+}
+
+.qr-img {
+  width: 150px;
+  padding: 10px;
+}
+</style>
+
+<div class="big-container">
+  <div style="background-color: #545bee; height: 5px;">
+  </div>
+
+  <div class="container app-container">
+    <div class="row m-t-10">
+      <div class="col-xs-12">
+        <a href="{{site.url}}"><i class="fa fa-home"></i>回首页</a>
+      </div>
+    </div>
+
+    <div class="row app-wrapper">
+      <div class="col-md-5 app-info">
+        <h1 style="color: #545bee;"><img class="img-rounded" src="{{site.url}}/assets/mocha/mocha.jpg" alt="元智魔卡" style="margin-right: 20px;" />元智魔卡</h1>
+        <h3 class="text-muted m-t-30">把历史带回家</h3>
+        <p class="text-muted m-t-20">
+          元智魔卡是一款文物展示类AR增强现实APP。你只需用你的手机摄像头扫描案例所示的明信片就可以出现相应的三维模型文物显示、文物历史概览视频，文物复原，用手指点击屏幕，就可以实现对相应模型的缩放旋转，赶快与千百年来的稀有文物来互动吧！
+        </p>
+      </div>
+      <div class="col-md-7">
+        <img src="{{site.url}}/assets/mocha/引导页2.png" class="img-responsive" >
+      </div>
+    </div>
+  </div>
+
+  <div class="p-v-50 hidden-xs" style="background-color: #eee; padding-bottom: 60px;">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <div class="row">
+            <div class="col-xs-6 text-center">
+              <a href="javascript: void(0);" class="disalbed" disabled target="_blank">
+                <img class="dl-img" src="{{site.url}}/assets/sakya/iphone.png" alt="" />
+              </a>
+            </div>
+            <div class="col-xs-6 text-center">
+              <a href="{{site.data.mocha.android_dl}}" target="_blank">
+                <img class="dl-img" src="{{site.url}}/assets/sakya/android.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="row m-t-10">
+            <div class="col-xs-6 text-center">
+              <!-- <img class="qr-img" src="{{site.url}}/assets/mocha/mocha-ios.png" /> -->
+              敬请期待
+            </div>
+            <div class="col-xs-6 text-center">
+              <img class="qr-img" src="{{site.url}}/assets/mocha/mocha-android.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="fixed-bottom-bar visible-xs-block" style="text-align: center; padding: 10px;">
+    <a href="javascript: void(0);" target="_blank" disabled class="btn btn-primary">iOS下载</a>
+    <a href="{{site.data.mocha.android_dl}}" target="_blank" class="btn btn-primary">安卓下载</a>
+  </div>
+
+</div>
