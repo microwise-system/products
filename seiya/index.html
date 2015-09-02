@@ -1,0 +1,142 @@
+---
+layout: blank
+title: 微导游
+description: 提供全新的多媒体导览服务。
+keywords: 监控中心客户端,监控中心,客户端,区域中心
+---
+
+<style>
+  body {
+    background: no-repeat center url('../assets/seiya/bg.png');
+    color: white;
+  }
+
+  .preview-img {
+    width: 240px;
+  }
+
+  .logo-img {
+    max-width: 350px;
+  }
+
+  .logo-img-xs {
+    max-width: 200px;
+  }
+
+  .dl-img, .qr-img {
+    width: 150px;
+  }
+
+  .qr-img {
+    width: 150px;
+    padding: 10px;
+  }
+
+  .adnroid-markets-list li a {
+    color: black;
+  }
+
+  .market-img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .fixed-bottom-bar {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+</style>
+
+<div class="container app-container">
+  <div class="row m-t-10">
+    <div class="col-xs-12">
+      <a href="{{site.url}}" style="color: white;"><i class="fa fa-home"></i>回首页</a>
+    </div>
+  </div>
+
+<div class="sakya-bg">
+  <div class="container">
+    <div class="row hidden-xs">
+      <div class="col-sm-7" style="text-align: center; position: relative;">
+        <img class="preview-img" src="{{site.url}}/assets/seiya/iphone_preview.gif" alt="preview" style="" />
+      </div>
+      <div class="col-sm-5" style="padding-top: 30px;">
+        <img class="logo-img" src="{{site.url}}/assets/seiya/logo.png" style="max-width: 20%;max-height: 20%;" alt="" />
+        <p style="font-size: 35px;font-family:'楷体';margin-top: 20px;">微导览客户端</p>
+        <span style="font-family:'楷体';font-size: 18px;">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;微导游，是您贴身的旅游助手，在出游时我们提供博物馆室内定位服务，同时您可以了解全国各博物馆的展览资讯，通过语音导览功能，您可以详细了解每一件文物背后的故事，同时也可以将其收藏或分享，建立自己的私人游记。
+        </span>
+        <!--<img style="max-width: 70%;max-height: 70%;margin-top: 15px;" src="{{site.url}}/assets/seiya/brochure.png" alt=""/>-->
+        <div class="row" style="margin-top: 50px;">
+          <div class="col-xs-5">
+            <a href="{{site.data.seiya.ios_dl}}" target="_blank">
+              <img class="dl-img" src="{{site.url}}/assets/seiya/ios.png" alt="" />
+            </a>
+          </div>
+          <div class="col-xs-5">
+            <a href="{{site.data.seiya.android_dl}}" target="_blank">
+              <img class="dl-img" src="{{site.url}}/assets/seiya/android.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-xs-5">
+            <span style="color: white;font-size: 37px;">敬请期待</span>
+            <!--<img class="qr-img" src="{{site.url}}/assets/sakya/qr_dl_ios.png" />-->
+          </div>
+
+          <div class="col-xs-5">
+            <img class="qr-img" src="{{site.url}}/assets/seiya/qr_dl_android.png" />
+            <br>
+            <!--各大应用市场均已发布-->
+            <ul class="adnroid-markets-list list-unstyled" style="color: white;">
+              <!--<li>-->
+               <!--<a href="http://zhushou.360.cn/detail/index/soft_id/3027493" target="_blank">-->
+                 <!--<img src="{{site.url}}/assets/360_market.png" alt="" class="market-img" />-->
+                 <!--360手机助手</a><br>-->
+              <!--</li>-->
+              <!--<li>-->
+               <!--<a href="http://shouji.baidu.com/software/item?docid=7819874&f=sug@software" target="_blank">-->
+                 <!--<img src="{{site.url}}/assets/baidu_market.png" alt="" class="market-img" />-->
+                 <!--百度手机助手</a>-->
+              <!--</li>-->
+              <!--<li>-->
+               <!--<a href="http://www.wandoujia.com/apps/com.microwise_system.sakya2" target="_blank">-->
+                 <!--<img src="{{site.url}}/assets/wandoujia_market.png" alt="" class="market-img" />-->
+                 <!--豌豆荚</a><br>-->
+              <!--</li>-->
+              <li>
+               <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.microwise.seiya" style="color: white;" target="_blank">
+                 <img src="{{site.url}}/assets/qq_market.png" alt="" class="market-img" />
+                 应用宝</a>
+              </li>
+              <!--<li>-->
+               <!--<a href="http://app.mi.com/detail/101564?ref=search" target="_blank">-->
+                 <!--<img src="{{site.url}}/assets/xiaomi_market.png" alt="" class="market-img" />-->
+                 <!--小米应用商店</a><br>-->
+              <!--</li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row visible-xs-block" style="padding-bottom: 60px;">
+      <div class="col-xs-12 text-center" style="padding-bottom: 30px;">
+        <img class="logo-img-xs" src="{{site.url}}/assets/sakya/logo.png" alt="" />
+      </div>
+      <div class="col-xs-12 text-center">
+        <img class="preview-img" src="{{site.url}}/assets/sakya/iphone_preview.gif" alt="preview" />
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed-bottom-bar visible-xs-block" style="text-align: center; padding: 10px;">
+    <a href="{{site.data.sakya.ios_dl}}" target="_blank" class="btn btn-primary">iOS下载</a>
+    <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.microwise_system.sakya2" target="_blank" class="btn btn-primary">安卓下载</a>
+  </div>
+</div>
