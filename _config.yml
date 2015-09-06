@@ -2,7 +2,7 @@ name: 元智产品
 description: >
   元智产品介绍我们硬件和软件产品，覆盖全套文物保护解决方案。
 keywords: 元智产品,产品,元智,文物保护,环境监测,环境监控
-url: http://127.0.0.1:4000
+url: http://products.microwise-system.com
 mirror_url: http://products-mw-mirror.qiniudn.com
 safe: true
 lsi: false
