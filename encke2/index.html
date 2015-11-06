@@ -1,0 +1,152 @@
+---
+layout: blank
+title: 掌上银河
+description: 掌上银河让你随时随地了解文物保护现场，查看最新的数据和图表。
+keywords: 掌上银河,银河应用,银河客户端
+---
+
+<style>
+  body {
+    background: no-repeat center url('../assets/encke2/bg.jpg');
+  }
+  .navbar-brand, .navbar-brand:hover {
+    color: white;
+  }
+
+  .preview-img {
+    width: 240px;
+  }
+
+  .preview-slide {
+    position: absolute;
+    left: 34%;
+    right: 50%;
+    top: 56px;
+    width: 220px;
+  }
+
+  .logo-img {
+    max-width: 350px;
+  }
+
+  .logo-img-xs {
+    max-width: 200px;
+  }
+
+  .dl-img, .qr-img {
+    width: 150px;
+  }
+
+  .qr-img {
+    width: 150px;
+    padding: 10px;
+  }
+
+  .adnroid-markets-list li a {
+    color: black;
+  }
+
+  .market-img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .fixed-bottom-bar {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+</style>
+
+<nav class="navbar navbar-static-top" role="navigation">
+  <div class="container">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{site.url}}/encke2/" style="font-weight: bold; float: none;">
+        <img src="{{site.url}}/assets/encke2/logo.png" alt="" style="height: 50px; display: inline-block; box-sizing: border-box; padding: 12px 0;" />
+        掌上银河
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="{{site.url}}">←回首页</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+</nav>
+
+<div class="sakya-bg">
+  <div class="container">
+    <div class="row hidden-xs">
+      <div class="col-sm-7" style="text-align: center; position: relative;">
+        <img class="preview-img" src="{{site.url}}/assets/encke2/iphone-preview.gif" alt="preview" style="" />
+        <br>
+        <!-- <a href="guide.html" class="m-t-10" style="display: inline-block; color: white; font-size: 1.2em;">如何使用 <i class="glyphicon glyphicon-question-sign"></i></a> -->
+      </div>
+      <div class="col-sm-5" style="padding-top: 30px;">
+        <img class="logo-img" src="{{site.url}}/assets/encke2/slogon.png" alt="" />
+
+        <div class="row" style="margin-top: 50px;">
+          <div class="col-xs-5">
+            <a target="_blank" class="disabled" disabled="disabled">
+              <img class="dl-img" src="{{site.url}}/assets/sakya/iphone.png" alt="" />
+            </a>
+          </div>
+          <div class="col-xs-5">
+            <a href="{{site.data.encke2.android_dl}}" target="_blank">
+              <img class="dl-img" src="{{site.url}}/assets/sakya/android.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-xs-5">
+            <img class="qr-img hidden" src="{{site.url}}/assets/sakya/qr_dl_ios.png" />
+            <span class="white">敬请期待</span>
+          </div>
+
+          <div class="col-xs-5">
+            <img class="qr-img" src="{{site.url}}/assets/sakya/qr_dl_android.png" />
+            <br>
+            各大应用市场均已发布
+            <ul class="adnroid-markets-list list-unstyled">
+              <li>
+               <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.microwise.encke" target="_blank">
+                 <img src="{{site.url}}/assets/qq_market.png" alt="" class="market-img" />
+                 应用宝</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row visible-xs-block" style="padding-bottom: 60px;">
+      <div class="col-xs-12 text-center" style="padding-bottom: 30px;">
+        <img class="logo-img-xs" src="{{site.url}}/assets/encke2/logo.png" alt="" />
+        <br>
+        <!-- <a href="guide.html" class="btn btn-primary btn-sm m-t-20">如何使用？</a> -->
+      </div>
+      <div class="col-xs-12 text-center">
+        <img class="preview-img" src="{{site.url}}/assets/encke2/iphone-preview.gif" alt="preview" />
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed-bottom-bar visible-xs-block" style="text-align: center; padding: 10px;">
+    <a target="_blank" class="btn btn-primary disabled">iOS下载</a>
+    <a href="{{site.data.encke2.android_dl}}" target="_blank" class="btn btn-primary">安卓下载</a>
+  </div>
+</div>
