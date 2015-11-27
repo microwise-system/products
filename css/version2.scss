@@ -16,14 +16,9 @@ img.thumbnail {
 }
 
 .slick-dots {
-  bottom: 0;
+  bottom: 5px;
   margin-bottom: 0;
-}
-
-@media (max-width: 767px) {
-  .slick-dots {
-    text-align: right;
-  }
+  text-align: right;
 }
 
 .slick-dots li button:before {
@@ -48,12 +43,12 @@ img.thumbnail {
     text-align: center;
     background-color: #666;
     opacity: 0.8;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     color: white;
 
     .head1 {
-      font-size: 34px;
+      font-size: 30px;
     }
 
     .head2 {
@@ -61,15 +56,11 @@ img.thumbnail {
     }
 
     @media (max-width: 767px) {
-      padding-top: 5px;
-      padding-bottom: 5px;
-
       .head1 {
-        font-size: 20px;
+        font-size: 18px;
       }
 
       .head2 {
-        font-size: 10px;
         display: none;
       }
     }
