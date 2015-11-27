@@ -1,35 +1,143 @@
 ---
-layout: default
-title: 监控设备
+layout: blank
+title: 硬件产品
+description: 硬件产品应用场景包括：文物保护环境、遗址保护现场和考古发掘现场。
+keywords: 硬件产品,文物保护环境,遗址保护现场,考古发掘现场
 ---
+<link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/components/slick-carousel/slick/slick.css' | prepend: site.url }}">
+<link rel="stylesheet" href="{{ '/assets/components/slick-carousel/slick/slick-theme.css' | prepend: site.url }}">
+<link rel="stylesheet" href="{{ '/css/version2.css' | prepend: stie.url }}">
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="{{ '/assets/components/slick-carousel/slick/slick.min.js' | prepend: site.url }}"></script>
 
-<div class="row">
-    <div class="col-md-12">
-        <h2>网关</h2>
-        <ul>
-            <li>多功能网关
-                <ul>
-                    <li>多种网络接入
-                        <ul>
-                            <li>WIFI</li>
-                            <li>GPRS</li>
-                            <li>以太网</li>
-                        </ul>
-                    </li>
-                    <li>数据缓存，断网不丢数据</li>
-                </ul>
-            </li>
-        </ul>
+{% include navbar.html %}
 
-        <h2>监测设备</h2>
-        <ul>
-            <li>so2</li>
-            <li>co2</li>
-        </ul>
-
-        <h2>控制设备</h2>
-        <ul>
-            <li>天卫一</li>
-        </ul>
+<div id="sliders">
+  <div>
+    <img src="{{ '/assets/devices/slide1.jpg' | prepend: site.url }}" alt="" class="img-responsive">
+    <div class="description">
+      <div class="head1">遗址保护现场</div>
+      <div class="head2">硬件使用场景</div>
     </div>
+  </div>
+  <div>
+    <img src="{{ '/assets/devices/slide2.jpg' | prepend: site.url }}" alt="" class="img-responsive">
+    <div class="description">
+      <div class="head1">文物保护环境</div>
+      <div class="head2">硬件使用场景</div>
+    </div>
+  </div>
+  <div>
+    <img src="{{ '/assets/devices/slide3.jpg' | prepend: site.url }}" alt="" class="img-responsive">
+    <div class="description">
+      <div class="head1">考古发掘现场</div>
+      <div class="head2">硬件使用场景</div>
+    </div>
+  </div>
 </div>
+
+<div class="p-v-50" style="background-color: #E9EEEC;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="text-center m-v-20">
+          <div>
+            <img src="{{ '/assets/devices/logo1.png' | prepend: site.url }}" alt="">
+          </div>
+        </div>
+        <h3>文物保护环境</h3>
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <p class="text-muted">环境因素是引起博物馆馆藏文物腐蚀损坏的主要原因。因此对博物馆文物保存环境进行必要的监测、评估和调控，使文物处于一个相对“稳定、洁净、安全”的生存环境，是文物预防性保护工作的重要内容。</p>
+          </div>
+        </div>
+        <div class="row m-t-30">
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <img src="{{ '/assets/devices/section1/1.jpg' | prepend: site.url }}" alt="" class="thumbnail">
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <img src="{{ '/assets/devices/section1/2.jpg' | prepend: site.url }}" alt="" class="thumbnail">
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <img src="{{ '/assets/devices/section1/3.jpg' | prepend: site.url }}" alt="" class="thumbnail">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-v-50" style="background-color: #E8EGF0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="text-center m-v-20">
+          <img src="{{ '/assets/devices/logo2.png' | prepend: site.url }}" alt="">
+        </div>
+        <h3>遗址保护现场</h3>
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <p class="text-muted">我们搭建了结构合理、功能突出、实用高效的综合信息监测及预警管理系统平台，为文化遗产地综合信息的监测、评估、预警、管理以及信息公共传播服务等方面的工作提供科技支撑。</p>
+          </div>
+        </div>
+        <div class="row m-t-30">
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <img src="{{ '/assets/devices/section2/1.jpg' | prepend: site.url }}" alt="" class="thumbnail">
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <img src="{{ '/assets/devices/section2/2.jpg' | prepend: site.url }}" alt="" class="thumbnail">
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <img src="{{ '/assets/devices/section2/3.jpg' | prepend: site.url }}" alt="" class="thumbnail">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-v-50" style="background-color: #E9e4ea;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="text-center m-v-20">
+          <img src="{{ '/assets/devices/logo3.png' | prepend: site.url }}" alt="">
+        </div>
+        <h3>考古发掘现场</h3>
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <p class="text-muted">国家科技支撑计划“文物出土现场保护移动实验室”中配备了我公司研发的“文物保存环境无线实时监测系统”，使科学考古发掘预案制定及墓葬环境规律的探测及研究成为可能。</p>
+          </div>
+        </div>
+        <div class="row m-t-30">
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <img src="{{ '/assets/devices/section3/1.jpg' | prepend: site.url }}" alt="" class="thumbnail">
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <img src="{{ '/assets/devices/section3/2.jpg' | prepend: site.url }}" alt="" class="thumbnail">
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <img src="{{ '/assets/devices/section3/3.jpg' | prepend: site.url }}" alt="" class="thumbnail">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include footer.html %}
+
+<script type="text/javascript" charset="utf-8">
+   $('#sliders').slick({
+     dots: true,
+     autoplay: true,
+     autoplaySpeed: 5000,
+     fade: true,
+     cssEase: 'linear',
+     pauseOnHover: false,
+     arrows: false,
+     mobileFirst: true,
+   });
+ </script>
