@@ -141,33 +141,38 @@ title: 银河
 <!--</div>-->
 <!--</div>-->
 <style>
-    body{font-family: "微软雅黑";}
-    .row1{background-image:url("../assets/galaxy/bg-1.jpg");
-        height: 1000px;
-        color: white;
-        background-repeat:round;
+    body{
+      font-family: "微软雅黑";
     }
-    .row1 img {display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 200px;
+    .row1{
+      background-image:url("../assets/galaxy/bg-1.jpg");
+      height: 700px;
+      color: white;
+      background-repeat:round;
     }
-    .row2{background-color: white;
-        display: block;
-        height:800px;
-        margin: 100px auto;
-        text-align: center;
-        width: 600px;
-        padding: 100px}
-    .row3{background-image:url("../assets/galaxy/bg-3.png");
-        text-align: center;
-        margin: 0 auto;
-        height: 800px;
-        padding: 100px}
-    .row4{background-image:url("../assets/galaxy/bg-4.png");
-        height: 220px;
-        text-align: center;
-        padding: 70px
+    .row1 img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 100px;
+    }
+    .row2{
+      background-color: white;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    .row3{
+      background-image:url("../assets/galaxy/bg-3.png");
+      text-align: center;
+      margin: 0 auto;
+      padding: 100px}
+    .row4{
+      background-image:url("../assets/galaxy/bg-4.png");
+      text-align: center;
+      padding: 70px
     }
 
 </style>
@@ -208,20 +213,47 @@ title: 银河
         <img src="../assets/galaxy/milkyway.png"/>
     </div>
 </div>
-<div class="row2">
+<div class="row row2">
     <div class="col-md-12">
+      <div style="text-align: center;">
         <img src="../assets/galaxy/2-1.png"/>
+      </div>
+      <div style="margin-top: 30px;text-align: center;">
         <img src="../assets/galaxy/2-2.png"/>
+      </div>
     </div>
 </div>
-<div class="row3">
+<div class="row row3">
     <div class="col-md-12">
         <h2>工作场景</h2>
-        <img src="../assets/galaxy/3.gif"/>
+        <div>
+          <img src="../assets/galaxy/3.gif"/>
+        </div>
     </div>
 </div>
 <div class="row4">
-    <div class="v1">
-        <img src="../assets/galaxy/4-4.png"/>
+  <div class="container">
+    <div class="col-md-offset-2 col-md-8">
+      <div class="row" style="color: #ddd;">
+        <div class="col-md-4" style="height: 110px;">
+          <img src="{{ '/assets/logo.png' | prepend: site.url }}" alt="">
+        </div>
+        <div class="col-md-4" style="border-right: 2px solid #666; border-left: 2px solid #666;">
+          <div style="text-align: center;">
+            <img style="width: 80px; display: inline-block;" src="{{ '/assets/weixin-qrcode.jpg' | prepend: site.url }}" alt="">
+            <span>
+              <strong>官方微信</strong>
+            </span>
+          </div>
+        </div>
+        <div class="col-md-4" style="text-align: left;">
+          <strong>联系我们</strong>
+          <br>
+          总机: 029-88246388
+          <br>
+          地址: 陕西省西安市高新区锦业路69号创业研发园E座4F
+        </div>
+      </div>
     </div>
+  </div>
 </div>
