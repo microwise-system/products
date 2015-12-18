@@ -1,160 +1,139 @@
 ---
 layout: blank
-title: 汉阳陵魔卡
+title: 汉阳陵-慧涂
 ---
 
 <style>
-body {
-  /* background-color: #545bee; */
-  background-color: white;
-}
-
-.big-container {
-  min-height: 500px;
-  height: 100%;
-  position: relative;
-}
-
-.fixed-bottom-bar {
-  background: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-}
-
-@media (max-width: 767px) {
-  .app-container {
-    padding-bottom: 60px;
+  body {
+    background-image: url("{{site.url}}/assets/mocha/hyl/top-left.png"),
+                      url("{{site.url}}/assets/mocha/hyl/bottom-right.png"),
+                      url("{{site.url}}/assets/mocha/hyl/bottom-left-horse.png"),
+                      url("{{site.url}}/assets/mocha/hyl/bottom-right-waitress.png"),
+                      url("{{site.url}}/assets/mocha/hyl/bg2.png");
+    background-position: left top, right bottom, left bottom, right 40%, center;
+    background-repeat: no-repeat,no-repeat, no-repeat, no-repeat, repeat;
   }
 
-  #cards {
-    background-color: #eee;
-  }
-}
-
-@media (min-width: 992px) {
-  .app-wrapper {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  @media (min-width: 1200px) {
+    .container {
+        width: 800px;
+    }
+    body {
+      min-height: 700px;
+    }
   }
 
- .app-info {
-    margin-top: 80px;
+  @media (min-width: 992px) {
+    .container {
+        width: 800px;
+    }
+    body {
+      min-height: 700px;
+    }
   }
-}
 
-.dl-img, .qr-img {
-  width: 150px;
-}
+  @media (max-width: 767px) {
+    body {
+      background-image: url("{{site.url}}/assets/mocha/hyl/top-left.png"),
+                        url("{{site.url}}/assets/mocha/hyl/bottom-right.png"),
+                        url("{{site.url}}/assets/mocha/hyl/bg2.png");
+      background-position: left top, right bottom, center;
+      background-repeat: no-repeat,no-repeat, repeat;
+    }
 
-.qr-img {
-  width: 150px;
-  padding: 10px;
-}
+    .big-container {
+      padding-bottom: 20px;
+    }
+  }
+
+  .big-container {
+    color: white;
+  }
+
+  .qrcode {
+    width: 50px;
+    height: 50px;
+  }
+
+  .qrcode-text {
+    color: #999;
+    font-size: 12px;
+  }
+
+  .img-responsive.text-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
 </style>
 
 <div class="big-container">
-  <div style="background-color: #545bee; height: 5px;">
-  </div>
 
-  <div class="container app-container">
-    <div class="row m-t-10">
-      <div class="col-xs-12">
-        <a href="{{site.url}}"><i class="fa fa-home"></i>回首页</a>
+  <div class="container">
+    <div class="row m-t-5">
+      <img style="height: 35px;" src="{{site.url}}/assets/mocha/hyl/logo.png" alt="">
+      <img style="height: 40px;" class="m-l-20" src="{{site.url}}/assets/mocha/hyl/hyl-logo2.png" alt="">
+    </div>
+
+    <div class="row text-center m-t-30">
+      <div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6 col-xs-offset-1 col-xs-10">
+        <img class="img-responsive" src="{{site.url}}/assets/mocha/hyl/ring.png" alt="">
       </div>
     </div>
 
-    <div class="row app-wrapper">
-      <div class="col-md-5 app-info">
-        <h1 style="color: #545bee;"><img class="img-rounded" src="{{site.url}}/assets/mocha/mocha.jpg" alt="元智魔卡" style="margin-right: 20px;" />魔卡</h1>
-        <h3 class="text-muted m-t-30">把历史带回家</h3>
-        <p class="text-muted m-t-20">
-          元智魔卡是一款文物展示类AR增强现实APP。你只需用你的手机摄像头扫描案例所示的明信片就可以出现相应的三维模型文物显示、文物历史概览视频，文物复原，用手指点击屏幕，就可以实现对相应模型的缩放旋转，赶快与千百年来的稀有文物来互动吧！
-          <img src="{{site.url}}/assets/mocha/引导页2.png" class="hidden-sm hidden-md hidden-lg img-responsive" alt="元智魔卡效果图">
-        </p>
-      </div>
-      <div class="col-md-7">
-        <iframe class="hidden-xs" height="415" width="100%" src="http://player.youku.com/embed/XMTMxODkyMDIzMg==" frameborder=0 allowfullscreen></iframe>
-        <iframe class="hidden-sm hidden-md hidden-lg" height="215" width="100%" src="http://player.youku.com/embed/XMTMxODkyMDIzMg==" frameborder=0 allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-
-  <div class="p-v-50 hidden-xs" style="background-color: #eee; padding-bottom: 60px;">
-    <div class="container">
-
-      <div class="row">
-        <div class="col-md-5">
-          <img src="{{site.url}}/assets/mocha/引导页2.png" class="img-responsive" alt="元智魔卡效果图">
-        </div>
-        <div class="col-md-7">
-          <div class="row">
-            <div class="col-xs-6 text-center">
-              <a href="{{site.data.mocha.ios_dl}}" class="disalbed" disabled target="_blank">
-                <img class="dl-img" src="{{site.url}}/assets/sakya/iphone.png" alt="" />
-              </a>
-            </div>
-            <div class="col-xs-6 text-center">
-              <a href="{{site.data.mocha.android_dl}}" target="_blank">
-                <img class="dl-img" src="{{site.url}}/assets/sakya/android.png" alt="" />
-              </a>
-            </div>
+    <div class="row text-center m-t-30">
+      <div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6 col-xs-offset-1 col-xs-10">
+        <div class="row hidden-xs">
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <img class="qrcode" src="{{site.url}}/assets/mocha/hyl/eye80.png" alt=""
+              data-toggle="popover"
+              data-trigger="hover"
+              data-html="true"
+              data-placement="left"
+              data-content="<img class='' src='{{site.url}}/assets/mocha/hyl/weibo_qrcode.jpg'>">
+            <br>
+            <span class="qrcode-text">汉阳陵<br>官方微博</span>
           </div>
-          <div class="row m-t-10">
-            <div class="col-xs-6 text-center">
-              <img class="qr-img" src="{{site.url}}/assets/mocha/mocha-ios.png" />
-            </div>
-            <div class="col-xs-6 text-center">
-              <img class="qr-img" src="{{site.url}}/assets/mocha/mocha-android.png" />
-              <span class="text-muted" style="display: inline-block; padding: 0 40px;">
-                各大应用市场均已上架，搜索“元智魔卡”下载应用。
-              </span>
-            </div>
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <img src="{{site.url}}/assets/mocha/hyl/dl_qrcode.png" alt="">
+            <br>
+            <span style="font-size: 16px;">扫一扫下载APP</span>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <img class="qrcode" src="{{site.url}}/assets/mocha/hyl/weixin12.png" alt=""
+              data-toggle="popover"
+              data-trigger="hover"
+              data-html="true"
+              data-placement="right"
+              data-content="<img class='' src='{{site.url}}/assets/mocha/hyl/weixin_qrcode.jpg'>">
+            <br>
+            <span class="qrcode-text">汉阳陵<br>官方微信</span>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="p-v-50" id="cards">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <a href="#cards" style="color: black;">
-            <h4>明信片试用下载</h4>
-          </a>
+        <div class="row visible-xs-block text-center">
+          <div class="col-xs-12">
+            <a href="{{site.data.mocha.hyl.ios_dl}}" class="btn btn-primary hidden">iOS下载</a>
+            <a href="{{site.data.mocha.hyl.android_dl}}" target="_blank" class="btn btn-primary btn-lg"><i class="fa fa-android"></i> 安卓下载</a>
+          </div>
         </div>
 
-        <div class="col-md-3">
-          <a href="{{site.url}}/assets/mocha/明信片-兵马俑.jpg" class="thumbnail">
-            <img src="{{site.url}}/assets/mocha/明信片-兵马俑.jpg" alt="明信片-兵马俑">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="{{site.url}}/assets/mocha/明信片-执壶.jpg" class="thumbnail">
-            <img src="{{site.url}}/assets/mocha/明信片-执壶.jpg" alt="明信片-执壶">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="{{site.url}}/assets/mocha/明信片-簪花仕女图.jpg" class="thumbnail">
-            <img src="{{site.url}}/assets/mocha/明信片-簪花仕女图.jpg" alt="明信片-簪花仕女图">
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="{{site.url}}/assets/mocha/明信片-香炉.jpg" class="thumbnail">
-            <img src="{{site.url}}/assets/mocha/明信片-香炉.jpg" alt="明信片-香炉">
-          </a>
+        <div class="row visible-xs-block text-center m-t-30">
+          <div class="col-xs-6">
+            <img class="img-responsive text-center" src="{{site.url}}/assets/mocha/hyl/weixin_qrcode.jpg" alt="">
+            <br>
+            <i class="fa fa-wechat"></i> 汉阳陵微信
+            <br>
+            <span class="text-muted">(长按识别图中二维码)</span>
+          </div>
+          <div class="col-xs-6">
+            <img class="img-responsive text-center" src="{{site.url}}/assets/mocha/hyl/weibo_qrcode.jpg" alt="">
+            <br>
+            <a href="http://m.weibo.cn/u/5348093967"><i class="fa fa-weibo"></i> 汉阳陵微博</a>
+            <br>
+            <span class="text-muted">(点击关注)</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
-
-  <div class="fixed-bottom-bar visible-xs-block" style="text-align: center; padding: 10px;">
-    <a href="{{site.data.mocha.ios_dl}}" class="btn btn-primary">iOS下载</a>
-    <a href="{{site.data.mocha.android_dl}}" target="_blank" class="btn btn-primary">安卓下载</a>
-  </div>
-
 </div>

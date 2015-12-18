@@ -1,3 +1,7 @@
 android_dl: http://a.app.qq.com/o/simple.jsp?pkgname=com.microwise.yuanzhimocha
 # https://itunes.apple.com/app/id1031106804
 ios_dl: http://a.app.qq.com/o/simple.jsp?pkgname=com.microwise.yuanzhimocha
+
+hyl:
+  android_dl: TODO
+  ios_dl: TODO
