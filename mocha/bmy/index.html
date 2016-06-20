@@ -4,13 +4,137 @@ title: 兵马俑-慧涂
 ---
 
 <style>
+.m-t-80 {
+  margin-top: 80px;
+}
+
+.m-t-100 {
+  margin-top: 100px;
+}
+
+body {
+  margin-top: 20px;
+  background-image: url("{{site.url}}/assets/mocha/bmy/person2.png"),
+                    url("{{site.url}}/assets/mocha/bmy/tongchema2.png"),
+                    url("{{site.url}}/assets/mocha/bmy/bg2.png");
+  background-position: left bottom, right bottom, center;
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+.logo {
+  width: 250px;
+  margin-left: 40px;
+}
+
+.huitu {
+  width: 250px;
+}
+
+.qrcode {
+  color: #8a8a8a;
+}
+
+.qrcode i {
+  font-size: 45px;
+}
+
+.qrcode-text {
+  color: #8a8a8a;
+}
+
+.wechat {
+  width: 150px;
+  height: 150px;
+}
+
+.wanxitang {
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 150px;
+}
+
+@media (min-width: 992px) {
+  .container {
+      width: 550px;
+  }
+  body {
+    min-height: 700px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+      width: 550px;
+  }
+  body {
+    min-height: 800px;
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background: url("{{site.url}}/assets/mocha/bmy/bg2.png") center repeat;
+  }
+
+  .logo {
+    width: 150px;
+    margin-left: 40px;
+  }
+
+  .huitu {
+    width: 150px;
+  }
+}
 </style>
 
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <h1>慧涂 - 兵马俑</h1>
-        <p class="text-muted">敬请期待</p>
+        <div>
+          <img class="logo" src="{{site.url}}/assets/mocha/bmy/logo.png" alt="兵马俑" title="兵马俑">
+        </div>
+
+        <div>
+          <img class="huitu" src="{{site.url}}/assets/mocha/bmy/huitu.png" alt="慧涂-兵马俑" title="慧涂-兵马俑">
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center m-t-80 hidden-xs">
+      <div class="col-md-offset-1 col-md-5">
+        <img src="{{site.url}}/assets/mocha/hyl/dl_qrcode.png" alt="扫码下载" title="扫码下载" style="width: 150px; width: 150px;">
+        <div class="m-t-10" style="font-size: 22px;">扫一扫下载APP</div>
+      </div>
+      <div class="col-md-6">
+        <div class="m-t-50">
+          <span class="qrcode"
+            data-toggle="popover"
+            data-trigger="hover"
+            data-html="true"
+            data-content="<img class='wechat' style='' src='{{site.url}}/assets/mocha/bmy/wechat.jpg'>">
+            <i class="fa fa-wechat"></i>
+          </span>
+          <div class="qrcode-text">官方微信</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center m-t-10 visible-xs-block">
+      <div class="col-xs-12 text-center">
+        <div class="m-t-10">
+          <a href="{{site.data.mocha.bmy.android_dl}}" target="_blank" class="btn btn-primary btn-lg"><i class="fa fa-mobile"></i> 应用下载</a>
+        </div>
+
+        <div class="text-center m-t-10">
+          <img class="wanxitang img-responsive" src="{{site.url}}/assets/mocha/bmy/wechat.jpg" alt="">
+          <br>
+          <i class="fa fa-wechat"></i> 官方微信号
+          <br>
+          <span class="text-muted">(长按识别图中二维码)</span>
+        </div>
       </div>
     </div>
   </div>
