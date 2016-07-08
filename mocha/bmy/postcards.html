@@ -1,0 +1,94 @@
+---
+layout: blank
+title: 明信片下载兵马俑-慧涂
+---
+
+<style>
+    body {
+        margin-top: 20px;
+        background-image: url("{{site.url}}/assets/mocha/bmy/person2.png"),
+        url("{{site.url}}/assets/mocha/bmy/tongchema2.png"),
+        url("{{site.url}}/assets/mocha/bmy/bg2.png");
+        background-position: left bottom, right bottom, center;
+        background-repeat: no-repeat, no-repeat, repeat;
+    }
+
+    @media (min-width: 1200px) {
+        .container {
+            width: 800px;
+        }
+        body {
+            min-height: 700px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .container {
+            width: 800px;
+        }
+        body {
+            min-height: 700px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        body {
+            background-image: url("{{site.url}}/assets/mocha/hyl/top-left.png"),
+            url("{{site.url}}/assets/mocha/hyl/bottom-right.png"),
+            url("{{site.url}}/assets/mocha/bmy/bg2.png");
+            background-position: left top, right bottom, center;
+            background-repeat: no-repeat,no-repeat, repeat;
+        }
+
+        .big-container {
+            padding-bottom: 20px;
+        }
+    }
+
+    .big-container {
+        color: black;
+    }
+
+    .qrcode {
+        width: 50px;
+        height: 50px;
+    }
+
+    .qrcode-text {
+        color: #999;
+        font-size: 12px;
+    }
+
+    .img-responsive.text-center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div class="big-container">
+
+    <div class="container">
+        <div class="row m-t-5">
+            <div class="col-md-12">
+                <img style="height: 40px;" class="m-l-20" src="{{site.url}}/assets/mocha/bmy/logo_sm.png" alt="">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>明信片下载</h3>
+                <div class="row">
+                    {% assign postcards = "qinshihuang.jpg mengtian.jpg lisi.jpg junli.jpg bubing.jpg gongnubing.jpg" || split:" " %}
+                    {% for postcard in postcards %}
+                    <div class="col-md-6">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="{{site.url}}/assets/mocha/bmy/postcard/{{postcard}}" alt="">
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
