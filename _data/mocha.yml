@@ -9,3 +9,6 @@ hyl:
 bmy:
   android_dl: http://a.app.qq.com/o/simple.jsp?pkgname=com.Rongda.SmARtistBMY
   ios_dl: "javascript: void(0);"
+
+northwest_university:
+  android_dl: http://a.app.qq.com/o/simple.jsp?pkgname=com.Microwise.SCHNU
