@@ -20,6 +20,8 @@
 
     if (navigator.getUserMedia) {
       if (navigator.getUserMedia) {
+        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia ||
+                                 navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
         navigator.getUserMedia({
             audio: true
@@ -166,9 +168,9 @@
         player.frame = 4;
       }
 
-      if (voiceVolume >= 0.3 && player.body.blocked.down) {
-        console.log('up')
-        player.body.velocity.y = -(voiceVolume * 400);
+      if ((voiceVolume >= 0.3 && player.body.blocked.down) || (cursors.up.isDown && player.body.blocked.down)) {
+        var scale = Math.max(0.7, voiceVolume)
+        player.body.velocity.y = -(scale * 400);
       }
     }
 
