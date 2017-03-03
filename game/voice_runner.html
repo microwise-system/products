@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="//cdn.jsdelivr.net/phaser/2.2.2/phaser.min.js"></script>
+  <style type="text/css">
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    var voiceVolume;
+    var audioContext = new AudioContext();
+
+    if (navigator.getUserMedia) {
+      if (navigator.getUserMedia) {
+
+        navigator.getUserMedia({
+            audio: true
+          },
+          function(stream) {
+            onStreamStart(stream)
+          },
+          function() {
+            console.log('error')
+            alert('检测不到声音')
+          }
+        )
+      }
+    }
+
+    function onStreamStart(stream) {
+      var streamNode = audioContext.createMediaStreamSource(stream);
+
+      var analyserNode = audioContext.createAnalyser()
+      analyserNode.smoothingTimeConstant = 0;
+      analyserNode.fftSize = 1024;
+
+      var processNode = audioContext.createScriptProcessor()
+      processNode.onaudioprocess = function() {
+        var timeDomainData = new Uint8Array(analyserNode.frequencyBinCount);
+        // analyserNode.getByteFrequencyData(array);
+        analyserNode.getByteTimeDomainData(timeDomainData);
+
+        var frequencyData = new Uint8Array(analyserNode.frequencyBinCount);
+        analyserNode.getByteFrequencyData(frequencyData);
+        recordMaxValue(timeDomainData)
+        // drawToCanvas('canvas', timeDomainData, timeDomainData.length)
+        // drawFrequenceToCanvs('canvas2', frequencyData, frequencyData.length)
+      }
+
+      var gainNode = audioContext.createGain()
+      gainNode.gain.value = 0.5;
+
+      streamNode.connect(analyserNode);
+      analyserNode.connect(processNode);
+      processNode.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+    }
+
+    function recordMaxValue(array) {
+      var ele = document.getElementById('text');
+      var max_v = 0;
+      for (var i = 0; i < array.length; i++) {
+        var v = Math.abs(1 - (array[i] / 128.0))
+        if (v > max_v) {
+          max_v = v;
+        }
+      }
+      voiceVolume = max_v;
+      return max_v;
+    }
+
+
+    var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
+      preload: preload,
+      create: create,
+      update: update,
+      render: render
+    });
+
+    var platforms, player, cursors, map, layer;
+
+    function preload() {
+      game.load.image('tiles', 'assets/tiles.jpg');
+      game.load.image('sky', 'assets/sky.png');
+      game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+      game.load.tilemap('map', 'assets/map.csv', null, Phaser.Tilemap.CSV);
+    }
+
+    function create() {
+      game.world.setBounds(0, 0, 1920, 600);
+      game.physics.startSystem(Phaser.Physics.ARCADE);
+      game.add.sprite(0, 0, 'sky');
+      game.add.sprite(800, 0, 'sky');
+
+      map = game.add.tilemap('map', 32, 32);
+      map.addTilesetImage('tiles');
+      map.setCollisionBetween(1, 1);
+      map.enbledBody = true;
+
+      layer = map.createLayer(0);
+      //  Resize the world
+      // layer.resizeWorld();
+      // layer.body.immovable = true;
+
+      platforms = game.add.group();
+      platforms.enableBody = true;
+
+      // var ground = platforms.create(0, game.world.height - 64, 'ground');
+      // ground.scale.setTo(2, 2);
+      // ground.body.immovable = true;
+
+      // var ledge = platforms.create(400, 400, 'ground');
+      // ledge.body.immovable = true;
+      //
+      // ledge = platforms.create(-150, 250, 'ground');
+      // ledge.body.immovable = true;
+
+      player = game.add.sprite(32, game.world.height - 150, 'dude');
+      game.physics.arcade.enable(player);
+      player.body.bounce.y = 0.2;
+      player.body.gravity.y = 300;
+      player.body.collideWorldBounds = false;
+      player.scale.setTo(0.8, 0.8)
+      player.position.setTo(32,10)
+
+      player.animations.add('left', [0, 1, 2, 3], 10, true);
+      player.animations.add('right', [5, 6, 7, 8], 10, true);
+      player.events.onOutOfBounds.add(playerDide, this);
+      player.checkWorldBounds = true;
+
+      game.camera.follow(player);
+      cursors = game.input.keyboard.createCursorKeys();
+    }
+
+    function update() {
+      // var hitPlatform = game.physics.arcade.collide(player, platforms);
+      game.physics.arcade.collide(player, layer);
+      // game.physics.arcade.collide(stars, platforms);
+      player.body.velocity.x = 0;
+
+      if (voiceVolume >= 0.4) {
+        player.body.velocity.x = voiceVolume * 100;
+        player.animations.play('right');
+      } else {
+        player.animations.stop();
+        player.frame = 4;
+      }
+
+
+      if (cursors.left.isDown) {
+        player.body.velocity.x = -150;
+        player.animations.play('left');
+      } else if (cursors.right.isDown) {
+        player.body.velocity.x = 150;
+        player.animations.play('right');
+      } else {
+        player.animations.stop();
+        player.frame = 4;
+      }
+
+      if (voiceVolume >= 0.3 && player.body.blocked.down) {
+        console.log('up')
+        player.body.velocity.y = -(voiceVolume * 400);
+      }
+    }
+
+    function render() {
+      // game.debug.cameraInfo(game.camera, 32, 32);
+      game.debug.spriteCoords(player, 32, 500);
+    }
+
+
+    function playerDide() {
+      var style = {
+        font: "bold 32px Arial",
+        fill: "#fff",
+        boundsAlignH: "center",
+        boundsAlignV: "middle"
+      };
+      if (player.position.y > 600) {
+        player.kill()
+        console.log('died')
+        text = game.add.text(700, 200, "Game Over", style);
+        text.setShadow(3, 3, 'rgba(0,0,0,0.5)', 2);
+      }
+    }
+  </script>
+</body>
+
+</html>
