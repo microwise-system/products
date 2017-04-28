@@ -1,0 +1,71 @@
+ html{
+ 	height: 100%;	
+ }
+ body{
+	background-image: url("images/background.png");
+	background-repeat: no-repeat;
+	height: 100%;	
+}
+.container{
+	height: 100%;
+	
+}
+.row{
+	height: 100%;
+	
+}
+.img-responsive{
+	text-align: center;
+	padding-top: 3%;
+}
+.text{
+	height: 40%;
+	padding-top: 3%;
+	padding-right: 10%;
+	padding-left: 10%;
+	font-size:18px;
+	overflow: scroll;
+}
+h2{
+ 	font-size: 14px;
+    color: #aeaeae;
+    text-align: center;
+}   
+.one{
+	border: 1px solid #906400;
+	width: 90%;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+.images{
+	text-align: center;
+}
+.images>img{
+   width: 30%;
+   height: 30%;
+   padding-top: 2%;
+   
+}
+.two{
+	border: 1px solid #906400;
+	width: 90%;
+	margin-right: 5%;
+	margin-left: 5%;
+	margin-top: 2%;
+}
+.c{
+	text-align: center;
+	padding-top:5%;
+}
+
+audio{
+	width: 90%;
+}
+.logo2{
+	text-align: center;
+}
+.logo2>img{
+	width: 50%;
+	height: 50%;
+	padding-top:3%;
+}
