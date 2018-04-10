@@ -12,3 +12,6 @@ bmy:
 
 northwest_university:
   android_dl: http://a.app.qq.com/o/simple.jsp?pkgname=com.Microwise.SCHNU
+akesu:
+  android_dl: http://a.app.qq.com/o/simple.jsp?pkgname=com.Microwise.SmARtist
+  ios_dl: "javascript: void(0);"
